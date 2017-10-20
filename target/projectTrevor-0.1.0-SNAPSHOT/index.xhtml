@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <head>
+        <title>Project Trevor</title>
+    </head>
+    <ui:decorate>
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css"></link>
+        <link rel="stylesheet" href="assets/css/styler.css"></link>
+        
+        <h:body class="container-fluid fundo">
+        <ui:define name="context">
+            <div class="login" align="center">
+                <h:message for="Falhou" id="Falhou"/>
+                <h:form>
+                    <h1>Bem-vindo ao Project Trevor!</h1>
+                    <div class="clearfix"> </div>
+                    <h:inputText binding="#{id}" pt:placeholder="ID" /><br/>
+                    <h:inputSecret binding="#{senha}" pt:placeholder="senha"/><br/>
+                    <div class="btn-group" role="group">
+                        <h:commandButton class="btn btn-default" value="Entrar" action="#{ControladorUsuario.login(id,senha)}"/>
+                        <h:commandButton class="btn btn-default" value="Cadastre-se"  action="#{ControladorUsuario.novoCadastro()}"/>
+                    </div>
+                </h:form>
+            </div>
+        </ui:define>
+        </h:body>
+        
+        <div class="footer">
+            <p>&copy; 2017 Julierme Jadon. Todos os direitos reservados. </p>
+        </div>
+        
+    </ui:decorate>
+</html>
+
