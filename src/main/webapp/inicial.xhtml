@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Project Trevor</title>
+    </head>
+    <ui:decorate>
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css"></link>
+        <link rel="stylesheet" href="assets/css/styler.css"></link>
+        
+        <h:body class="container-fluid fundo">
+        <ui:define name="context">
+            <section>
+                <div class="styler1">
+                    <article>
+                        
+                        <header id="header">
+                            <h1> <h:outputLabel value="usuario"></h:outputLabel></h1>
+                            <h2><h:outputLabel value="email"></h:outputLabel></h2>
+                        </header>
+                        <br/>
+                        <br/>
+                        <h:form>
+                            <h:inputText value="Digite o seu ID" pt:placehoder></h:inputText>
+                            <h:inputSecret value="Digite a Senha"></h:inputSecret>
+                            <h:inputSecret value="Confirme a Senha"></h:inputSecret>
+                            <h:commandButton class="btn btn-default" value="Atulizar" action="#{logController.login()}"></h:commandButton>
+                        </h:form>
+
+                    </article>
+                </div>
+            </section>
+            <br/>
+            <br/>
+            
+            <header id="header">
+                <h2>Adicione um Documento</h2>
+            </header>
+            
+            <h:form>
+                <section>
+                    <div class="styler1">
+                        <section>
+                            <h:inputText value=""  pt:placeholder="Nome do Arquivo"></h:inputText>
+                            <h:inputFile value="Arquivo" ></h:inputFile>
+                            <h:commandButton class="btn btn-default" value="Salvar" action="#{ControladorLogin.login()}"/>
+                        </section>
+                    </div>
+                </section>
+            </h:form>
+        </ui:define>
+        </h:body>
+        
+        <div class="footer">
+            <p>&copy; 2017 Julierme Jadon. Todos os direitos reservados. </p>
+        </div>
+    </ui:decorate>
+</html>
